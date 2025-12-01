@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'themes/app_theme.dart';
+import 'screens/listagem_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,6 +16,7 @@ class MinCadastroApp extends StatelessWidget {
       title: 'Mini Cadastro de Tarefas',
       theme: AppTheme.obterTema(),
       debugShowCheckedModeBanner: false,
+      home: const ListagemScreen(),
     );
   }
 }
