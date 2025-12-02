@@ -28,67 +28,13 @@ Este aplicativo foi desenvolvido como projeto acadêmico para demonstrar o domí
 
 | Campo | Valor |
 |-------|-------|
+| **Nome** | Yuri Alves Bordin |
 | **RA** | 202310149 |
+| **Nome** | Iago Armelin Piai |
+| **RA** | 202310086 |
 | **Nome do Banco** | RA_202310149_tarefas.db |
 | **Campo Extra** | flagSincronizado (boolean) |
 | **Tema** | temaMetal |
-| **Cor Primária** | Grey (#757575) |
-| **Cor Secundária** | Blue (#1976D2) |
-
----
-
-##  Estrutura do Projeto
-
-```
-lib/
-├── main.dart                 # Entrada da aplicação + Telas
-├── models/
-│   └── tarefa_model.dart     # Modelo de Tarefa com CRUD
-├── database/
-│   └── database_helper.dart  # SQLite Helper
-├── themes/
-│   └── app_theme.dart        # Tema da aplicação
-└── pubspec.yaml              # Dependências
-```
-
-### Arquivos Principais
-
-1. **tarefa_model.dart** - Modelo de dados com conversão JSON
-2. **database_helper.dart** - Helper SQLite com CRUD completo
-3. **main.dart** - Telas (Listagem, Formulário, Detalhes)
-4. **app_theme.dart** - Tema visual (Cinza + Azul)
-
----
-
-## 🗄️ Banco de Dados
-
-### Arquivo do Banco
-```
-RA_202310149_tarefas.db
-```
-
-### Estrutura da Tabela `tarefas`
-```sql
-CREATE TABLE tarefas (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  titulo TEXT NOT NULL,
-  descricao TEXT,
-  prioridade TEXT NOT NULL,
-  criadoEm TEXT NOT NULL,
-  flagSincronizado INTEGER DEFAULT 0
-);
-```
-
-### Campos da Tarefa
-
-| Campo | Tipo | Descrição |
-|-------|------|-----------|
-| id | INTEGER | Identificador único auto-incremento |
-| titulo | TEXT | Título da tarefa (obrigatório) |
-| descricao | TEXT | Descrição detalhada |
-| prioridade | TEXT | BAIXA, MÉDIA ou ALTA |
-| criadoEm | TEXT | Data/hora ISO 8601 |
-| flagSincronizado | INTEGER | 0=false, 1=true |
 
 ---
 
@@ -132,19 +78,26 @@ flutter run
 
 ## 📸 Screenshots Inclusos
 
-O repositório contém screenshots de:
-- ✅ Banco de dados criado (DB Browser)
-- ✅ Método `createDatabase()` no código
-- ✅ Tela de listagem com tarefas
-- ✅ Formulário preenchido
-- ✅ JSON do objeto criado
-- ✅ Arquivo .db com RA no nome
+### Print do arquivo .db do banco de dados
+<img width="499" height="229" alt="image" src="https://github.com/user-attachments/assets/62eacac3-1683-428f-8bb7-fa8bfcccdaba" />
+
+### Print do código do método createDatabase()
+<img width="533" height="252" alt="image" src="https://github.com/user-attachments/assets/f3d62637-b184-44c6-9f53-d2150169e162" />
+
+### Print da tela de listagem com pelo menos 1 tarefa
+<img width="407" height="864" alt="image" src="https://github.com/user-attachments/assets/69fdb97d-497c-496b-8b7c-d9eb45ae25d1" />
+
+### Print do formulário preenchido antes de salvar
+<img width="407" height="864" alt="image" src="https://github.com/user-attachments/assets/e67315ad-0bca-4111-9536-f1f73710b6f2" />
+
+### Print do JSON do objeto criado no console
+<img width="1172" height="36" alt="image" src="https://github.com/user-attachments/assets/ed78fe1e-4d51-43cc-9756-eb7ef0bc3a26" />
 
 ---
 
 ## 🎬 Vídeo Demonstrativo
 
-
+https://drive.google.com/file/d/1DuufLQNPJGx-GN9PqQES-QceV813XVzZ/view
 
 ---
 
